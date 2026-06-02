@@ -1,0 +1,44 @@
+{
+  "name": "jazzai",
+  "version": "1.0.4",
+  "description": "Hooks-first agentic coding workflow for Claude Code: PRD intake, exploration, tech design, task planning, TDD, and archive.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "jazz-ai": "bin/jazz-ai.mjs"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "README.md",
+    "USAGE_GUIDE.md",
+    ".claude/skills/",
+    ".claude/agents/",
+    ".claude/jazzai/hooks/",
+    ".claude/jazzai/settings.template.json",
+    "!.claude/jazzai/runtime/",
+    "!.claude/jazzai/hooks/tests/"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "test": "node --test tests/cli.test.mjs .claude/jazzai/hooks/tests/hook-system.test.mjs",
+    "test:cli": "node --test tests/cli.test.mjs",
+    "test:hooks": "node --test .claude/jazzai/hooks/tests/hook-system.test.mjs",
+    "pack:dry-run": "npm pack --dry-run",
+    "prepublishOnly": "npm test && node scripts/prepublish-check.mjs"
+  },
+  "keywords": [
+    "ai",
+    "coding-agent",
+    "claude-code",
+    "workflow",
+    "hooks",
+    "tdd"
+  ]
+}

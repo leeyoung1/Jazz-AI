@@ -1,0 +1,9 @@
+.claude/jazzai/runtime/
+.claude/jazzai/runtime/**
+.claude/jazzai/hooks/tests/
+.claude/jazzai/hooks/tests/**
+tests/
+tests/**
+.idea/
+.prd/
+.git/
