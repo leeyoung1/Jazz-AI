@@ -1,0 +1,9 @@
+.codeflicker/runtime/
+.codeflicker/runtime/**
+.codeflicker/hooks/tests/
+.codeflicker/hooks/tests/**
+tests/
+tests/**
+.idea/
+.prd/
+.git/
